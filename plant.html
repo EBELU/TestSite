@@ -2,13 +2,59 @@
 <html lang="sv">
 <head>
   <meta charset="UTF-8">
-  <title>Växtinformation</title>
+  <title>Växtdetaljer</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <a href="index.html">⬅ Tillbaka</a>
-  <div id="plant-info"></div>
 
-  <script src="script.js"></script>
+  <h1 id="plant-name">Växtdetaljer</h1>
+  <p><a href="index.html">← Tillbaka till växtdatabasen</a></p>
+
+  <div id="plant-details">
+    <p><strong>Latinskt namn:</strong> <em id="plant-latin"></em></p>
+    <p><strong>Kategori:</strong> <span id="plant-category"></span></p>
+    <p><strong>Invasiv i Sverige:</strong> <span id="plant-invasive"></span></p>
+    <p><strong>Ursprung:</strong> <span id="plant-origin"></span></p>
+    <p><strong>Beskrivning:</strong></p>
+    <p id="plant-description"></p>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Hämta id från URL
+      const params = new URLSearchParams(window.location.search);
+      const plantId = params.get("id");
+
+      const nameEl = document.getElementById("plant-name");
+      const latinEl = document.getElementById("plant-latin");
+      const categoryEl = document.getElementById("plant-category");
+      const invasiveEl = document.getElementById("plant-invasive");
+      const originEl = document.getElementById("plant-origin");
+      const descriptionEl = document.getElementById("plant-description");
+
+      fetch("plants.json")
+        .then(res => res.json())
+        .then(data => {
+          const plant = data.find(p => p.id === plantId);
+          if (!plant) {
+            nameEl.textContent = "Växten hittades inte";
+            return;
+          }
+
+          // Fyll i detaljer
+          nameEl.textContent = plant.namn;
+          latinEl.textContent = plant.latinsktNamn;
+          categoryEl.textContent = plant.kategori;
+          invasiveEl.textContent = plant.invasiv ? "Ja ⚠️" : "Nej";
+          originEl.textContent = plant.ursprung || "Okänt";
+          descriptionEl.textContent = plant.beskrivning || "Ingen beskrivning tillgänglig.";
+        })
+        .catch(err => {
+          nameEl.textContent = "Kunde inte läsa växtdata";
+          console.error("Fel vid hämtning av plants.json:", err);
+        });
+    });
+  </script>
+
 </body>
 </html>

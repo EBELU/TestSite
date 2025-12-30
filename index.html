@@ -8,8 +8,27 @@
 <body>
 
   <h1>Växtdatabas</h1>
-  <p>Klicka på en växt för mer information.</p>
 
+  <!-- FILTER & SÖK -->
+  <div id="controls">
+    <input
+      type="text"
+      id="search"
+      placeholder="Sök på namn eller latinskt namn"
+    >
+
+    <select id="category-filter">
+      <option value="">Alla kategorier</option>
+    </select>
+
+    <select id="invasive-filter">
+      <option value="">Alla</option>
+      <option value="true">Invasiv</option>
+      <option value="false">Ej invasiv</option>
+    </select>
+  </div>
+
+  <!-- TABELL -->
   <table id="plant-table">
     <thead>
       <tr>
@@ -19,9 +38,7 @@
         <th>Invasiv i Sverige</th>
       </tr>
     </thead>
-    <tbody>
-      <!-- Rader skapas av JavaScript -->
-    </tbody>
+    <tbody></tbody>
   </table>
 
   <script src="script.js"></script>

@@ -1,18 +1,103 @@
+/* ===== BODY & GENERAL ===== */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f8f5; /* mjuk grön bakgrund */
+  color: #2d3e2f;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #2b5d34;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+/* ===== FILTER & SÖKRUTOR ===== */
+#controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+#controls input,
+#controls select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #a6c2a6;
+  font-size: 1em;
+  outline: none;
+  transition: 0.2s;
+}
+
+#controls input:focus,
+#controls select:focus {
+  border-color: #4a946c;
+  box-shadow: 0 0 5px rgba(74, 148, 108, 0.5);
+}
+
+/* ===== TABELL ===== */
 table {
   width: 100%;
   border-collapse: collapse;
-  background: greem;
+  background: #ffffffcc; /* vit med lite transparens */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 th, td {
-  padding: 10px;
-  border: 1px solid #ccc;
+  padding: 12px 15px;
+  text-align: left;
 }
 
 th {
-  background: #e0e0e0;
+  background: #4a946c;
+  color: #f0f8f5;
+  font-size: 1.1em;
+}
+
+tr {
+  transition: background 0.3s;
+}
+
+tr:nth-child(even) {
+  background: #e6f2eb;
 }
 
 tr:hover {
-  background: #f2f9f2;
+  background: #cfe6d3;
+  cursor: pointer;
+}
+
+/* ===== TABLE TEXT STYLING ===== */
+td em {
+  color: #556b55;
+}
+
+/* ===== LÄNKAR TILLBAKA ===== */
+a {
+  text-decoration: none;
+  color: #2b5d34;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #4a946c;
+}
+
+/* ===== RESPONSIV DESIGN ===== */
+@media (max-width: 768px) {
+  #controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  table, th, td {
+    font-size: 0.9em;
+  }
 }

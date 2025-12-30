@@ -1,8 +1,8 @@
 /* ===== BODY & GENERAL ===== */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: #f0f8f5; /* mjuk grön bakgrund */
-  color: #2d3e2f;
+  background: #f2f8f2; /* ljus, mjuk grön bakgrund */
+  color: #2e3d2f; /* mörkgrön text för bra kontrast */
   max-width: 900px;
   margin: auto;
   padding: 20px;
@@ -10,9 +10,10 @@ body {
 
 h1 {
   text-align: center;
-  color: #2b5d34;
+  color: #2a5c2f; /* djup grön header */
   font-size: 2.5em;
   margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 /* ===== FILTER & SÖKRUTOR ===== */
@@ -27,27 +28,28 @@ h1 {
 #controls input,
 #controls select {
   padding: 8px 12px;
-  border-radius: 6px;
-  border: 1px solid #a6c2a6;
+  border-radius: 8px;
+  border: 1px solid #a3c9a8;
   font-size: 1em;
   outline: none;
   transition: 0.2s;
+  background-color: #ffffffcc;
 }
 
 #controls input:focus,
 #controls select:focus {
-  border-color: #4a946c;
-  box-shadow: 0 0 5px rgba(74, 148, 108, 0.5);
+  border-color: #4a8b5b;
+  box-shadow: 0 0 5px rgba(74, 139, 91, 0.5);
 }
 
 /* ===== TABELL ===== */
 table {
   width: 100%;
   border-collapse: collapse;
-  background: #ffffffcc; /* vit med lite transparens */
+  background: #ffffffcc; /* vit med lätt transparens */
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
 }
 
 th, td {
@@ -56,8 +58,8 @@ th, td {
 }
 
 th {
-  background: #4a946c;
-  color: #f0f8f5;
+  background: #4a8b5b; /* mörkare grön header */
+  color: #f2f2f2;
   font-size: 1.1em;
 }
 
@@ -66,28 +68,28 @@ tr {
 }
 
 tr:nth-child(even) {
-  background: #e6f2eb;
+  background: #e6f2e6; /* mjukt ljusgrön för jämna rader */
 }
 
 tr:hover {
-  background: #cfe6d3;
+  background: #c8e0c8; /* ljusgrön hover */
   cursor: pointer;
 }
 
 /* ===== TABLE TEXT STYLING ===== */
 td em {
-  color: #556b55;
+  color: #557755; /* lite mörkare grön för latinskt namn */
 }
 
 /* ===== LÄNKAR TILLBAKA ===== */
 a {
   text-decoration: none;
-  color: #2b5d34;
+  color: #2a5c2f;
   font-weight: bold;
 }
 
 a:hover {
-  color: #4a946c;
+  color: #4a8b5b;
 }
 
 /* ===== RESPONSIV DESIGN ===== */

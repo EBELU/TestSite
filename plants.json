@@ -1,0 +1,20 @@
+[
+  {
+    "id": "jatteloka",
+    "namn": "Jätteloka",
+    "latinsktNamn": "Heracleum mantegazzianum",
+    "kategori": "Ört",
+    "invasiv": true,
+    "beskrivning": "Jätteloka är en invasiv art i Sverige.",
+    "ursprung": "Kaukasus"
+  },
+  {
+    "id": "blabarsris",
+    "namn": "Blåbär",
+    "latinsktNamn": "Vaccinium myrtillus",
+    "kategori": "Risväxt",
+    "invasiv": false,
+    "beskrivning": "Vanlig i svenska skogar.",
+    "ursprung": "Europa"
+  }
+]

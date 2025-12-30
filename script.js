@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let plants = [];
 
   const tableBody = document.querySelector("#plant-table tbody");
-  const searchInput = document.getElementById("search");
+  const searchNameInput = document.getElementById("search-name");
+  const searchLatinInput = document.getElementById("search-latin");
   const categoryFilter = document.getElementById("category-filter");
   const invasiveFilter = document.getElementById("invasive-filter");
 
@@ -47,28 +48,25 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function applyFilters() {
-    const searchText = searchInput.value.toLowerCase();
+    const nameText = searchNameInput.value.toLowerCase();
+    const latinText = searchLatinInput.value.toLowerCase();
     const selectedCategory = categoryFilter.value;
     const invasiveValue = invasiveFilter.value;
 
     const filtered = plants.filter(plant => {
-      const matchesSearch =
-        plant.namn.toLowerCase().includes(searchText) ||
-        plant.latinsktNamn.toLowerCase().includes(searchText);
+      const matchesName = plant.namn.toLowerCase().includes(nameText);
+      const matchesLatin = plant.latinsktNamn.toLowerCase().includes(latinText);
+      const matchesCategory = selectedCategory === "" || plant.kategori === selectedCategory;
+      const matchesInvasive = invasiveValue === "" || String(plant.invasiv) === invasiveValue;
 
-      const matchesCategory =
-        selectedCategory === "" || plant.kategori === selectedCategory;
-
-      const matchesInvasive =
-        invasiveValue === "" || String(plant.invasiv) === invasiveValue;
-
-      return matchesSearch && matchesCategory && matchesInvasive;
+      return matchesName && matchesLatin && matchesCategory && matchesInvasive;
     });
 
     renderTable(filtered);
   }
 
-  searchInput.addEventListener("input", applyFilters);
+  searchNameInput.addEventListener("input", applyFilters);
+  searchLatinInput.addEventListener("input", applyFilters);
   categoryFilter.addEventListener("change", applyFilters);
   invasiveFilter.addEventListener("change", applyFilters);
 

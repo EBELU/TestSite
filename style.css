@@ -103,3 +103,70 @@ a:hover {
     font-size: 0.9em;
   }
 }
+
+/* ===== AUTOMATIC DARK MODE ===== */
+@media (prefers-color-scheme: dark) {
+
+  /* ===== BODY & GENERAL ===== */
+  body {
+    background: #121916;
+    color: #e3ece5;
+  }
+
+  h1 {
+    color: #8fcfa3;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+  }
+
+  /* ===== FILTER & SEARCH ===== */
+  #controls input,
+  #controls select {
+    background-color: #1b2620;
+    color: #e3ece5;
+    border-color: #2f4a38;
+  }
+
+  #controls input::placeholder {
+    color: #9fb6a6;
+  }
+
+  #controls input:focus,
+  #controls select:focus {
+    border-color: #6fb58a;
+    box-shadow: 0 0 6px rgba(111, 181, 138, 0.5);
+  }
+
+  /* ===== TABLE ===== */
+  table {
+    background: #1b2620;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+  }
+
+  th {
+    background: #2f4a38;
+    color: #e9f5ec;
+  }
+
+  tr:nth-child(even) {
+    background: #18221c;
+  }
+
+  tr:hover {
+    background: #294233;
+  }
+
+  /* ===== TABLE TEXT ===== */
+  td em {
+    color: #9fd3ae;
+  }
+
+  /* ===== LINKS ===== */
+  a {
+    color: #8fcfa3;
+  }
+
+  a:hover {
+    color: #b6ead0;
+  }
+}
+

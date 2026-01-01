@@ -9,12 +9,66 @@
     "ursprung": "Kaukasus"
   },
   {
-    "id": "blabarsris",
+    "id": "parkslide",
+    "namn": "Parkslide",
+    "latinsktNamn": "Reynoutria japonica",
+    "kategori": "Ört",
+    "invasiv": true,
+    "beskrivning": "Parkslide sprider sig snabbt och tränger undan andra arter.",
+    "ursprung": "Östasien"
+  },
+  {
+    "id": "lupin",
+    "namn": "Blomsterlupin",
+    "latinsktNamn": "Lupinus polyphyllus",
+    "kategori": "Ört",
+    "invasiv": true,
+    "beskrivning": "Blomsterlupin är vanlig längs vägar och ängar.",
+    "ursprung": "Nordamerika"
+  },
+  {
+    "id": "maskros",
+    "namn": "Maskros",
+    "latinsktNamn": "Taraxacum officinale",
+    "kategori": "Ört",
+    "invasiv": false,
+    "beskrivning": "Maskros är en vanlig och tålig växt i Sverige.",
+    "ursprung": "Europa"
+  },
+  {
+    "id": "blabar",
     "namn": "Blåbär",
     "latinsktNamn": "Vaccinium myrtillus",
-    "kategori": "Risväxt",
+    "kategori": "Buske",
     "invasiv": false,
-    "beskrivning": "Vanlig i svenska skogar.",
+    "beskrivning": "Blåbär är en viktig växt i svenska skogar.",
     "ursprung": "Europa"
+  },
+  {
+    "id": "gran",
+    "namn": "Gran",
+    "latinsktNamn": "Picea abies",
+    "kategori": "Träd",
+    "invasiv": false,
+    "beskrivning": "Gran är ett vanligt barrträd i Sverige.",
+    "ursprung": "Europa"
+  },
+  {
+    "id": "jattebalsamin",
+    "namn": "Jättebalsamin",
+    "latinsktNamn": "Impatiens glandulifera",
+    "kategori": "Ört",
+    "invasiv": true,
+    "beskrivning": "Jättebalsamin sprider sig längs vattendrag.",
+    "ursprung": "Himalaya"
+  },
+  {
+    "id": "vresros",
+    "namn": "Vresros",
+    "latinsktNamn": "Rosa rugosa",
+    "kategori": "Buske",
+    "invasiv": true,
+    "beskrivning": "Vresros är invasiv och hotar kustmiljöer.",
+    "ursprung": "Östasien"
   }
 ]
